@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import BoxesCarousel from "./components/BoxesCarousel/BoxesCarousel.jsx";
 import PromoPopup from "./components/PromoPopup/PromoPopup.jsx";
@@ -518,9 +519,8 @@ export default function App() {
 
           {/* Burger Button */}
           <button
-            className={`${styles.burgerButton} ${
-              isMobileMenuOpen ? styles.active : ""
-            }`}
+            className={`${styles.burgerButton} ${isMobileMenuOpen ? styles.active : ""
+              }`}
             onClick={toggleMobileMenu}
             aria-label="Menu"
           >
@@ -532,17 +532,15 @@ export default function App() {
 
         {/* Mobile Overlay */}
         <div
-          className={`${styles.mobileOverlay} ${
-            isMobileMenuOpen ? styles.active : ""
-          }`}
+          className={`${styles.mobileOverlay} ${isMobileMenuOpen ? styles.active : ""
+            }`}
           onClick={closeMobileMenu}
         ></div>
 
         {/* Mobile Navigation */}
         <nav
-          className={`${styles.mobileNav} ${
-            isMobileMenuOpen ? styles.active : ""
-          }`}
+          className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.active : ""
+            }`}
         >
           <div className={styles.mobileNavLinks}>
             <div className={styles.mobileNavLink}>
@@ -1036,9 +1034,8 @@ export default function App() {
             {faqData.map((faq, index) => (
               <div
                 key={index}
-                className={`${styles.faqItem} ${
-                  openFaqIndex === index ? styles.faqItemOpen : ""
-                }`}
+                className={`${styles.faqItem} ${openFaqIndex === index ? styles.faqItemOpen : ""
+                  }`}
               >
                 <div
                   className={styles.faqItemHeader}
@@ -1182,8 +1179,8 @@ export default function App() {
             ® 2025 ВауБокс. Все права защищены.
           </p>
           <div className={styles.footerItempoliticsLinks}>
-            <a href="#">Политика конфиденциальности</a>
-            <a href="#">Публичная оферта</a>
+            <Link to="/privacy">Политика конфиденциальности</Link>
+            <Link to="/public-offer">Публичная оферта</Link>
           </div>
         </div>
       </footer>
