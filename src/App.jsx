@@ -1,3 +1,4 @@
+// src\App.jsx
 import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import BoxesCarousel from "./components/BoxesCarousel/BoxesCarousel.jsx";
